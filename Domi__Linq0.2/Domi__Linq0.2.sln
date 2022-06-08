@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domi__Linq0.2", "Domi__Linq0.2.csproj", "{A186F0DD-2338-4F26-AC67-D71DD02B2426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A186F0DD-2338-4F26-AC67-D71DD02B2426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A186F0DD-2338-4F26-AC67-D71DD02B2426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A186F0DD-2338-4F26-AC67-D71DD02B2426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A186F0DD-2338-4F26-AC67-D71DD02B2426}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39F05862-4F22-4E3B-A672-42B18A9A7EDB}
+	EndGlobalSection
+EndGlobal

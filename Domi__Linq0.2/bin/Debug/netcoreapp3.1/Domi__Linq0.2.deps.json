@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Domi__Linq0.2/1.0.0": {
+        "runtime": {
+          "Domi__Linq0.2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Domi__Linq0.2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
