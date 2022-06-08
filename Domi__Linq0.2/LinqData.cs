@@ -14,7 +14,9 @@ namespace Domi__Linq0._2
 {
     public static class LinqData
     {
-       public static List<EntitieWarehouse> warehouses = new List<EntitieWarehouse>
+
+
+        public static List<EntitieWarehouse> warehouses = new List<EntitieWarehouse>
        {
             new EntitieWarehouse("Brug4", 0, "Arendonk", 2370, "Holstraat", 14, 3000, new List<int>{ 4, 3, 1, 5 }),
             new EntitieWarehouse("Brug1", 1, "Arendonk", 2370, "Holstraat", 3, 8000, new List<int>{ 1, 4, 3, 5, 2, 3, 3, 4, 4}),
