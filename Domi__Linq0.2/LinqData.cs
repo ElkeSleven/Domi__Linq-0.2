@@ -15,9 +15,9 @@ namespace Domi__Linq0._2
     public static class LinqData
     {
 
-
+        //BuildingName , WarehouseID , City , PostCode, Street, HouseNumber, StorageCapacity , EmployeeSatisfactionRating
         public static List<EntitieWarehouse> warehouses = new List<EntitieWarehouse>
-       {
+        {
             new EntitieWarehouse("Brug4", 0, "Arendonk", 2370, "Holstraat", 14, 3000, new List<int>{ 4, 3, 1, 5 }),
             new EntitieWarehouse("Brug1", 1, "Arendonk", 2370, "Holstraat", 3, 8000, new List<int>{ 1, 4, 3, 5, 2, 3, 3, 4, 4}),
             new EntitieWarehouse("Poort1", 2, "Gent", 9000, "Stropkaai", 12, 7000, new List<int>{ 5, 4, 3, 4 , 4}),
@@ -32,9 +32,10 @@ namespace Domi__Linq0._2
             new EntitieWarehouse("Brug3", 11, "Arendonk", 2370, "Molenweg", 8, 8000, new List<int>{ 5, 2, 3, 5, 5 }),
             new EntitieWarehouse("D2", 12, "Knokke", 8300, "Vaart", 4, 2200, new List<int>{ 2, 3, 4 }),
             new EntitieWarehouse("D3", 13, "Knokke", 8300, "Vaart", 6, 2200, new List<int>{ 3, 4, 3 }) 
-       };
+        };
 
-
+        
+        //      FirstName, LastName,ID, WarehouseID
         public static List<EntitieEmployee> employees = new List<EntitieEmployee>
         {
             new EntitieEmployee("Jos", "Jansen", 0, 1),
