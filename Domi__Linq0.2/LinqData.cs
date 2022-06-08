@@ -7,7 +7,7 @@ using System.Text;
  
  */
 /* Opdaracht 
- * Gebruik de volgende code om data in te laden in je programma 
+ * Gebruik de volgende code om data in te laden in je programma (code is gegeven)
  */
 
 namespace Domi__Linq0._2
@@ -35,7 +35,7 @@ namespace Domi__Linq0._2
         };
 
         
-        //      FirstName, LastName,ID, WarehouseID
+        //      FirstName, LastName, ID, WarehouseID
         public static List<EntitieEmployee> employees = new List<EntitieEmployee>
         {
             new EntitieEmployee("Jos", "Jansen", 0, 1),

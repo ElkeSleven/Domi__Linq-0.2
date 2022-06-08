@@ -34,12 +34,12 @@ namespace Domi__Linq0._2
     {
         static void Main(string[] args)
         {
-                       SortLinq_a();
-                        SortLinq_b();
-                        SortLinq_c(); 
+            SortLinq_a();
+            SortLinq_b();
+            SortLinq_c(); 
             SortLinq_d();   
             SortLinq_e();
-            SortLinq_f();
+            SortLinq_f();// vanaf 'f'  zijn de querys niet af of kunnen er fouten in zitten 
             SortLinq_g();
             SortLinq_h();
             SortLinq_i();
@@ -167,6 +167,10 @@ namespace Domi__Linq0._2
             Console.WriteLine("---end methodSyntax e-----------------------------------------------------------------------------");
             Console.ReadLine();
         }
+        
+        
+        
+        
         //* f. Wat zijn de volledige namen van de werknemers die werken voor een
         //  magazijn met een opslagcapaciteit groter dan 2000?
         //  Vermeld ook de naam en capaciteit van het magazijn.
@@ -189,49 +193,57 @@ namespace Domi__Linq0._2
             Console.ReadLine();
         }
 
-
-        //
-        //* g. Wat zijn de id’s en voornamen van werknemers die een achternaam delen met een andere werknemer van het magazijn?
+        //* g. Wat zijn de id’s en voornamen van werknemers
+        //die een achternaam delen met een andere werknemer
+        //van het magazijn?
         public static void SortLinq_g()
         {
             // manier 1 query syntax
-            var querySyntax = from entities in LinqData.warehouses where entities.City == "Berchem" select entities.BuildingName;
-
-            foreach (string entitie in querySyntax)
+            //var querySyntax = from entities in LinqData.employees where entities.LastName == "beb" group entities by entities.WarehouseID;
+   
+/*            foreach (var entitie in querySyntax)
             {
                 Console.WriteLine(entitie);
 
-            }
+            }*/
             Console.WriteLine("-------end querySyntax g------------------------------------------------------------------------");
             Console.ReadLine();
 
             // manier 2 Method syntax
-            var methodSyntax = LinqData.warehouses.Where(x => x.City == "Berchem").Select(x => x.BuildingName);
-            foreach (string x2 in methodSyntax)
-            {
-                Console.WriteLine(x2);
-
-            }
+            //var methodSyntax = 
+         
             Console.WriteLine("-------end methodSyntax g-------------------------------------------------------------------------");
             Console.ReadLine();
         }
+
+
         // * h.Wat zijn de voornamen van de werknemers die werken voor een magazijn met een opslagcapaciteit die groter is dan 5000. 
+
         // Vermeld ook de volledige locatie (stad, postcode, straat, huisnummer) van het magazijn.
         public static void SortLinq_h()
         {
             // manier 1 query syntax
-            var querySyntax = from entities in LinqData.warehouses where entities.City == "Berchem" select entities.BuildingName;
-
-            foreach (string entitie in querySyntax)
+            var querySyntax = (from employees in LinqData.employees
+                               join magazijn in LinqData.warehouses
+                               on employees.WarehouseID equals magazijn.WarehouseID
+                               where employees.WarehouseID == magazijn.WarehouseID
+                               // where magazijn.StorageCapacity < 500
+                               //orderby magazijn.City
+                               select (employees, magazijn));
+            //  (from entities in LinqData.warehouses where entities.StorageCapacity < 5000 select entities.WarehouseID)
+            foreach (var entitie in querySyntax)
             {
-                Console.WriteLine(entitie);
-
+                Console.WriteLine($"{entitie.employees.FirstName} {entitie.employees.LastName}");
+                Console.WriteLine($"werkt in het magazijn: {entitie.magazijn.City} {entitie.magazijn.PostCode} {entitie.magazijn.Street} {entitie.magazijn.HouseNumber}");
+            
             }
             Console.WriteLine("--------end querySyntax h-----------------------------------------------------------------------");
             Console.ReadLine();
 
+
+
             // manier 2 Method syntax
-            //var methodSyntax = 
+            //var methodSyntax =  
             Console.WriteLine("---------end methodSyntax h-----------------------------------------------------------------------");
             Console.ReadLine();
         }
