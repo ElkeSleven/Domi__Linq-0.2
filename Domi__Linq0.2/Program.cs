@@ -218,7 +218,6 @@ namespace Domi__Linq0._2
 
 
         // * h.Wat zijn de voornamen van de werknemers die werken voor een magazijn met een opslagcapaciteit die groter is dan 5000. 
-
         // Vermeld ook de volledige locatie (stad, postcode, straat, huisnummer) van het magazijn.
         public static void SortLinq_h()
         {
@@ -252,13 +251,13 @@ namespace Domi__Linq0._2
         public static void SortLinq_i()
         {
             // manier 1 query syntax
-            var querySyntax = from entities in LinqData.warehouses where entities.City == "Berchem" select entities.BuildingName;
-
+            //var querySyntax =
+/*
             foreach (string entitie in querySyntax)
             {
                 Console.WriteLine(entitie);
 
-            }
+            }*/
             Console.WriteLine("---------end querySyntax i----------------------------------------------------------------------");
             Console.ReadLine();
 
